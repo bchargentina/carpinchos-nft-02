@@ -1,0 +1,33 @@
+name: Importar colección verificada
+on:
+  push:
+    paths: ['.github/workflows/importar.yml']
+permissions:
+  contents: write
+jobs:
+  importar:
+    if: github.run_number == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Importar imágenes, metadata y documentos
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -eu
+          curl --fail --location --retry 3 'https://teacher-require-tactics-ftp.trycloudflare.com/carpinchos-nft-02.bundle' -o /tmp/coleccion.bundle
+          echo '9f1b1624f8f6ef48ebae2fb808caf69226a6f805fbb78a4ef3a61c3abad76feb  /tmp/coleccion.bundle' | sha256sum --check
+          git init -b main coleccion
+          cd coleccion
+          git config user.name 'BCH Argentina'
+          git config user.email '150078790+bchargentina@users.noreply.github.com'
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          git -c http.extraheader="$AUTH_HEADER" fetch --depth=1 origin main
+          git checkout -B main FETCH_HEAD
+          git fetch /tmp/coleccion.bundle main:importado
+          git merge --allow-unrelated-histories --no-edit importado
+          sha256sum --check SHA256SUMS > /tmp/verificacion.txt
+          test "$(find images -type f -name '*.webp' | wc -l)" -eq 2500
+          test "$(find metadata -type f -name '*.json' | wc -l)" -eq 2500
+          git -c http.extraheader="$AUTH_HEADER" push origin main
