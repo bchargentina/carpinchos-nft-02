@@ -1,0 +1,32 @@
+{
+  "name": "Carpinchos BCH Argentina",
+  "total_supply_planned": 5000,
+  "repository_range": {
+    "first": 2501,
+    "last": 5000
+  },
+  "category_id": null,
+  "issuance_status": "not_yet_issued",
+  "sale_price_bch": "0.075",
+  "rounds": [
+    {
+      "quantity": 2000
+    },
+    {
+      "quantity": 1500
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "round_interval_weeks": {
+    "min": 6,
+    "max": 8,
+    "subject_to_demand": true
+  },
+  "artwork_commit": "b5ba20ba843bd0798dbed7e66647b1793e4d9643",
+  "image_format": "WebP",
+  "width": 1254,
+  "height": 1254,
+  "metadata_status": "Individual attribute JSON; canonical BCMR pending issuance."
+}
