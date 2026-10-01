@@ -18,7 +18,7 @@ Planned price: **0.075 BCH per NFT**, across three rounds of **2,000, 1,500, and
 - `manifest.json`: IDs, composition records, file sizes, and hashes. Original asset identifiers are retained for reproducibility.
 - `collection.json`: collection configuration and status.
 - [BENEFITS.md](BENEFITS.md): Club membership credit, ARG Tokens airdrops, and support for BCH adoption.
-- [LICENSE.md](LICENSE.md): current status of usage rights.
+- [LICENSE.md](LICENSE.md): NFT holder image usage license.
 - [validacion-unicidad.json](validacion-unicidad.json): uniqueness validation results for the entire 5,000-piece collection.
 
 The individual JSON files do not replace the CashTokens BCMR. Splitting the artwork across two repositories is for storage only; it does not represent separate collections or sale rounds.
