@@ -1,37 +1,38 @@
-# Carpinchos BCH Argentina — Parte 2
+# Carpinchos BCH Argentina — Part 2
 
-Arte y metadata de **2.500 piezas**, números **2501–5000**, de una colección de **5.000 NFT únicos**.
+Artwork and metadata for **2,500 pieces**, numbered **2501–5000**, from a collection of **5,000 unique NFTs**.
 
-Proyecto de [BCH Argentina](https://www.bcharg.com/). Cuenta oficial: [bchargentina](https://github.com/bchargentina).
+A project by [BCH Argentina](https://www.bcharg.com/). Official account: [bchargentina](https://github.com/bchargentina).
 
-## Estado
+## Status
 
-El arte está terminado. **Los tokens todavía no fueron emitidos y la venta no está abierta.** El Category ID oficial, el BCMR autenticado y el enlace de compra se publicarán después de las pruebas de emisión.
+The artwork is complete. **The tokens have not been issued, and sales are not open.** The official Category ID, authenticated BCMR, and purchase link will be published after issuance testing.
 
-Precio previsto: **0,075 BCH por NFT**, en tres rondas de **2.000, 1.500 y 1.500**. El intervalo orientativo es de 6–8 semanas, sujeto a ventas y demanda; aún no hay fecha de lanzamiento.
+Planned price: **0.075 BCH per NFT**, across three rounds of **2,000, 1,500, and 1,500**. The suggested interval is 6–8 weeks, subject to sales and demand. No launch date has been set.
 
-## Archivos
+## Files
 
-- `images/`: WebP finales a 1254×1254, calidad 95.
-- `metadata/`: nombre, descripción, atributos y URL de imagen fijada al commit del arte.
-- `SHA256SUMS`: hashes SHA-256 de las imágenes.
-- `manifest.json`: numeración, combinaciones, pesos y hashes.
-- `collection.json`: configuración y estado de la colección.
-- [BENEFICIOS.md](BENEFICIOS.md): crédito para la membresía del Club, airdrops de ARG Tokens y apoyo a la adopción de BCH.
-- [LICENSE.md](LICENSE.md): estado de los derechos de uso.
+- `images/`: final 1254×1254 WebP images, quality 95.
+- `metadata/`: names, descriptions, attributes, and image URLs pinned to the artwork commit.
+- `SHA256SUMS`: SHA-256 image hashes.
+- `manifest.json`: IDs, composition records, file sizes, and hashes. Original asset identifiers are retained for reproducibility.
+- `collection.json`: collection configuration and status.
+- [BENEFITS.md](BENEFITS.md): Club membership credit, ARG Tokens airdrops, and support for BCH adoption.
+- [LICENSE.md](LICENSE.md): current status of usage rights.
+- [validacion-unicidad.json](validacion-unicidad.json): uniqueness validation results for the entire 5,000-piece collection.
 
-Los JSON individuales no sustituyen el BCMR de CashTokens. La división en dos repos es únicamente de almacenamiento y no representa dos colecciones ni las rondas de venta.
+The individual JSON files do not replace the CashTokens BCMR. Splitting the artwork across two repositories is for storage only; it does not represent separate collections or sale rounds.
 
-## Integridad
+## Integrity
 
-Commit del arte: `b5ba20ba843bd0798dbed7e66647b1793e4d9643`. Los 5.000 archivos finales fueron comprobados: cero combinaciones o imágenes duplicadas, incluso al comparar los píxeles decodificados.
+Artwork commit: `b5ba20ba843bd0798dbed7e66647b1793e4d9643`. All 5,000 final files were checked: no duplicate combinations or images, including comparison of decoded pixels.
 
-Para verificar esta parte en Linux:
+Verify this part on Linux:
 
 ```sh
 sha256sum -c SHA256SUMS
 ```
 
-En macOS: `shasum -a 256 -c SHA256SUMS`.
+On macOS: `shasum -a 256 -c SHA256SUMS`.
 
-Otra parte: [carpinchos-nft-01](https://github.com/bchargentina/carpinchos-nft-01).
+Other part: [carpinchos-nft-01](https://github.com/bchargentina/carpinchos-nft-01).
