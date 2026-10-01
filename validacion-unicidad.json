@@ -1,0 +1,9 @@
+{
+  "images": 5000,
+  "unique_traits": 5000,
+  "unique_files": 5000,
+  "unique_decoded_pixel_images": 5000,
+  "duplicates": 0,
+  "manifest_hashes_match": true,
+  "scope": "Entire 5000-piece collection across both repositories"
+}
